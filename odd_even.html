@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        .main{
+            width: 60%;
+            height: 100%;
+            background-color: blueviolet;
+            font-size: 20px;
+        }
+        .first{
+            width: 100%;
+            height: 70%;
+        }
+        .second{
+            width: 100%;
+            height: 30%;
+        }
+        #n1,#n2{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="first">
+        <form>
+            <label for="num1">From:</label>&nbsp;&nbsp;
+            <input type="number" name="num1" id="num1" placeholder="Number"><br><br><br>
+            <label for="num2">To:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" name="num2" id="num2" placeholder="Number"><br><br><br>
+            <input type="button" value="Divided by 2 "  onclick="dividedNumber()">
+        </form>
+    </div><br><br>
+    <div class="second">
+        <span id="str1"></span>&nbsp;<span id="n1"></span><br><span id="str2"></span><span id="n2"></span>
+        <span id="show"></span>
+    </div>
+</div>
+<script>
+    var even,odd;var num1,num2;
+    function dividedNumber() {
+        num1=parseInt(document.getElementById("num1").value);
+        num2=parseInt(document.getElementById("num2").value);
+        document.getElementById("str1").innerHTML="Even Number:";
+        document.getElementById("str2").innerHTML="Odd Number:";
+
+        for(var i=num1;i<=num2;i++){
+            if(i%2==0){
+                document.getElementById("n1").innerHTML+=i+" ";
+            }else {
+                document.getElementById("n2").innerHTML+=i+" ";
+            }
+        }
+    }
+</script>
+</body>
+</html>
